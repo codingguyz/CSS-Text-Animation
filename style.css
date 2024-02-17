@@ -1,0 +1,83 @@
+/*google font */
+
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Poppins:wght@400;600&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color:black ;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+}
+.animated-text{
+    font-size: 40px;
+    font-weight: 600;
+    min-width: 30vw;
+    border-top: 2px solid #e2f819;
+    border-bottom: 2px solid #e2f819;
+    padding: 10px;
+   
+
+}
+.animated-text span{
+    position: relative;
+
+}
+.animated-text span::before{
+    content: '';
+    color: #e2f819;
+    animation: words 20s infinite;
+}
+.animated-text span::after{
+    content: '';
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: black;
+    border-left: 2px solid #e2f819;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor {
+    to{
+        border-left: 2px  solid transparent;
+    }
+
+}
+@keyframes words{
+    0%{
+        content: 'Youtube';    
+
+    }
+    21%,40%{
+            
+content: "Blogger";
+    }
+    41%, 60%{
+     content: "Content Creater";       
+
+    }
+    61%,80%{
+            
+     content: "Designer";
+    }
+    81%, 100%{
+      content: "Freelancer";      
+
+    }
+}
+@keyframes typing {
+    10%,15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 8px);
+    }
+}
+
